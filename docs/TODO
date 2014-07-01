@@ -16,5 +16,5 @@ Reference kenbuild.zip and jfbuild_src20050531.zip for the actual Build
 sourcecode. We probably need to carefully compare where this stuff is, its
 mostly math routines and rendering.
 
-track upstream master (https://github.com/coelckers/gzdoom) for merging, remove
-other branches, we don't need them.
+DONE: track upstream masters (rheit, coelickers) for merging to master, keep work on
+wip branch.
