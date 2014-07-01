@@ -1,0 +1,16 @@
+./src/r_segs.cpp
+./src/r_draw.cpp
+./src/r_things.cpp
+./src/m_fixed.h
+./src/r_bsp.cpp
+./src/asm_ia32/a.asm
+./src/mscinlines.h
+./src/gccinlines.h
+./src/resourcefiles/file_grp.cpp
+./src/oplsynth/dosbox/opl.h
+./src/oplsynth/dosbox/opl.cpp
+./src/r_polymost.cpp
+./src/basicinlines.h
+./src/r_polymost.h
+./docs/BUILDLIC.TXT
+./docs/rh-log.txt

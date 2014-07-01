@@ -1,0 +1,8 @@
+./src/sound/i_soundinternal.h
+./src/sound/fmod_wrap.h
+./src/sound/fmodsound.h
+./src/timidity/sf2.h
+./output_sdl/output_sdl.c
+./src/CMakeLists.txt
+./output_sdl/CMakeLists.txt
+./docs/rh-log.txt

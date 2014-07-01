@@ -25,7 +25,8 @@ if( ZD_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 	endif( APPLE )
 endif( ZD_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 
-option( DYN_FLUIDSYNTH "Dynamically load fluidsynth" ON )
+# Avoid fluidsynth also
+#option( DYN_FLUIDSYNTH "Dynamically load fluidsynth" ON )
 
 if( CMAKE_SIZEOF_VOID_P MATCHES "8" )
 	set( X64 64 )
@@ -313,16 +314,23 @@ else( WIN32 OR APPLE )
 		PATHS ${FMOD_LOCAL_LIB_DIRS} )
 endif( WIN32 OR APPLE )
 
+# quick and dirty hack to prevent config errors because FMOD not supported on
+# unixes. at a later stage, remove all FMOD dependency for all platforms.
+
 if( FMOD_LIBRARY )
 	message( STATUS "FMOD library found at ${FMOD_LIBRARY}" )
 else( FMOD_LIBRARY )
-	message( SEND_ERROR "Could not find FMOD library" )
+	if(UNIX)
+		message( STATUS "FMOD library not found, but not supported" )
+	else( UNIX )
+		message( SEND_ERROR "Could not find FMOD library" )
+	endif( UNIX )
 endif( FMOD_LIBRARY )
 
 
 # Search for FluidSynth
 
-find_package( FluidSynth )
+#find_package( FluidSynth )
 
 # Search for NASM
 

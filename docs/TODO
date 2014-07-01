@@ -1,0 +1,20 @@
+../README.md was based on this file, removed the preambly bits to that.
+
+From the discussion on
+http://www.doomworld.com/vb/source-ports/58608-make-a-gpl-fork-of-gzdoom the
+following issues arise:
+
+- Build code is problematic: software renderer is an issue in this regard.
+- oplsynth code is a problem. Ironically, they've partially implemented the
+  same dosbox opl code as chocolate doom.
+- openAL is a problem, but we want to avoid it anyway.
+- output_sdl will need a rewrite obviously.
+
+
+Check docs/fmod-dep and docs/silverman-dep for problem files.
+Reference kenbuild.zip and jfbuild_src20050531.zip for the actual Build
+sourcecode. We probably need to carefully compare where this stuff is, its
+mostly math routines and rendering.
+
+track upstream master (https://github.com/coelckers/gzdoom) for merging, remove
+other branches, we don't need them.
